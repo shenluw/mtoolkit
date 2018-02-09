@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+
+
+
+  kbe:
+    container_name: kbe
+    build: .
+    ports:
+      - 20013:20013
+      - 20015:20015
+      - 40001:40000
+
+    stdin_open: true
+    tty: true
+
+    volumes:
+      - d:/work/Engine/:/kbe/kbengine/
+      - d:/work/DouPai/kbengine/:/kbe/source/
+
+    # command: "/bin/bash /kbe/source/assets/start_server.sh && tail -f  /dev/null"
