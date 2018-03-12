@@ -18,5 +18,6 @@ services:
     volumes:
       - d:/work/Engine/:/kbe/kbengine/
       - d:/work/DouPai/kbengine/:/kbe/source/
-
+	
+    command: /bin/bash -c "/kbe/source/assets/start_server.sh && tail -f /dev/null"
     # command: "/bin/bash /kbe/source/assets/start_server.sh && tail -f  /dev/null"
